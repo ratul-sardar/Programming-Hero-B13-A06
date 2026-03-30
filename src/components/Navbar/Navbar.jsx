@@ -12,38 +12,6 @@ export default function Navbar() {
   return (
     <nav className="cssContainer py-4">
       <div className="navbar p-0">
-        {/* Nav Logo*/}
-        <div className="navbar-start">
-          <img src={brandImage} alt="Brand Logo" className="w-45 h-auto" />
-        </div>
-
-        {/* Nav Links*/}
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            {NavLinks.map((link, index) => {
-              return (
-                <li key={index}>
-                  <a
-                    href={link.url}
-                    className="font-semibold text-left text-text-black hover:text-purple"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-
-        {/* Nav Cta*/}
-        <div className="navbar-end">
-          <a className="btn">Button</a>
-        </div>
-      </div>
-
-      {/* Test*/}
-
-      <div className="navbar p-0">
         <div className="navbar-start">
           {/* Mobile Nav*/}
           <div className="dropdown">
