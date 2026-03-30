@@ -1,10 +1,13 @@
+import Navbar from "./components/Navbar/Navbar";
+
 function App() {
   return (
     <>
-      <h1 className="font-extrabold">he.</h1>
-      <p className="">Text me nigga! Let's play valorant!</p>
-      <button className="btn btn-primary">click me</button>
-      <section className="cssContainer ] bg-amber-500">hi nigga!</section>
+      <header className="border-b border-gray shadow-xm">
+        <Navbar></Navbar>
+      </header>
+      <main className=""></main>
+      <footer className=""></footer>
     </>
   );
 }
