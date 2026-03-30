@@ -1,6 +1,44 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+@theme {
+    --color-purple: #4f39f6;
+    --background-image-main-linear: linear-gradient(to right, #4f39f6, #9514fa);
+    --color-text-black: #101727;
+    --color-gray: #627382;
+    --color-gray-light: #e5e7eb;
+}
+
+@layer components {
+    .cssContainer {
+        @apply w-11/12 mx-auto max-w-300 py-15 sm:py-22.5 lg:py-30;
+    }
+
+    h1 {
+        @apply text-[4.5rem];
+    }
+    h2 {
+        @apply text-[3rem];
+    }
+    h3 {
+        @apply text-[2.5rem];
+    }
+
+    h1,
+    h2,
+    h3 {
+        /*font-weight: 900;
+        color: var(--TextBlack);*/
+        @apply font-extrabold text-text-black;
+    }
+
+    p {
+        @apply text-[1rem] font-normal text-gray;
+    }
+
+    /*End of @layer components*/
+}
+
 * {
     font-family: "Manrope", sans-serif;
 }
