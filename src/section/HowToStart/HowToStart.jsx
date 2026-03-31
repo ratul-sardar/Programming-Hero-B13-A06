@@ -43,6 +43,7 @@ export default function HowToStart() {
         <div className="grid gap-6 md:gap-7.5 grid-cols-1 md:grid-cols-3">
           {cardContents.map((card, index) => (
             <HowToStartCard
+              key={index}
               cardDescription={card.cardDescription}
               cardTitle={card.cardTitle}
               cardImage={card.cardImage}
