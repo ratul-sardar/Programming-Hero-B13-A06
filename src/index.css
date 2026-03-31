@@ -7,6 +7,7 @@
     --color-text-black: #101727;
     --color-gray: #627382;
     --color-gray-light: #e5e7eb;
+    --color-background-white: #f9fafc;
 }
 
 @layer components {

@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./section/Hero/Hero";
 import SocialProof from "./section/SocialProof/SocialProof";
+import HowToStart from "./section/HowToStart/HowToStart";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <main className="">
         <Hero></Hero>
         <SocialProof></SocialProof>
+        <HowToStart></HowToStart>
       </main>
       <footer className=""></footer>
     </>
