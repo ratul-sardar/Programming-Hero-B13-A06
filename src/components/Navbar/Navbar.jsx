@@ -1,4 +1,5 @@
 import brandImage from "../../assets/Brand/DigiTools.png";
+import Button from "../Button/Button";
 
 const NavLinks = [
   { name: "Products", url: "#" },
@@ -85,6 +86,9 @@ export default function Navbar() {
         {/* Navbar Cta*/}
         <div className="navbar-end">
           <a className="btn">Button</a>
+          <Button bg={true} linear={true}>
+            Get Started
+          </Button>
         </div>
       </div>
     </nav>
