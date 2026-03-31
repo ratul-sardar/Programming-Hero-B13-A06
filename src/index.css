@@ -15,7 +15,7 @@
     }
 
     h1 {
-        @apply text-[4.5rem];
+        font-size: clamp(2.75rem, 0.75rem + 5vw, 4.5rem);
     }
     h2 {
         @apply text-[3rem];

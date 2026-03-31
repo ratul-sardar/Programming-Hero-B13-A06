@@ -1,3 +1,4 @@
+import { FiShoppingCart } from "react-icons/fi";
 import brandImage from "../../assets/Brand/DigiTools.png";
 import Button from "../Button/Button";
 
@@ -8,6 +9,8 @@ const NavLinks = [
   { name: "Testimonials", url: "#" },
   { name: "FAQ", url: "#" },
 ];
+
+const ctaLink = "#";
 
 export default function Navbar() {
   return (
@@ -56,6 +59,11 @@ export default function Navbar() {
                   </li>
                 );
               })}
+              <li className="py-4">
+                <Button bg={true} linear={true} ctaLink={ctaLink}>
+                  Get Started
+                </Button>
+              </li>
             </ul>
           </div>
 
@@ -84,11 +92,29 @@ export default function Navbar() {
         </div>
 
         {/* Navbar Cta*/}
-        <div className="navbar-end">
-          <a className="btn">Button</a>
-          <Button bg={true} linear={true}>
-            Get Started
-          </Button>
+        <div className="navbar-end flex gap-4">
+          {/* Cart*/}
+          <a href="" className="block p-3  relative text-2xl">
+            <span className="absolute top-0 right-0 inline-block p-0.5 text-sm font-semibold text-purple">
+              7
+            </span>
+            <FiShoppingCart />
+          </a>
+
+          {/* Login Button*/}
+          <a
+            href=""
+            className="font-semibold text-left text-text-black hover:text-purple"
+          >
+            Login
+          </a>
+
+          {/* Cta*/}
+          <div className="hidden lg:block">
+            <Button bg={true} linear={true} ctaLink={ctaLink}>
+              Get Started
+            </Button>
+          </div>
         </div>
       </div>
     </nav>

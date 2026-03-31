@@ -1,9 +1,9 @@
-export default function Button({ bg, linear, children }) {
+export default function Button({ bg, linear, children, ctaLink }) {
   return (
     <>
       <a
-        href="#"
-        className={`${bg && linear ? "bg-main-linear text-white" : bg && !linear ? "bg-white text-purple" : !bg && !linear ? "border border-purple text-purple" : ""}  rounded-full px-4 py-3  font-semibold text-[1rem] space-x-2.51 hover:scale-98 hover:shadow-xs hover:shadow-purple`}
+        href={ctaLink}
+        className={`${bg && linear ? "bg-main-linear text-white" : bg && !linear ? "bg-white text-purple" : !bg && !linear ? "border border-purple text-purple hover:bg-purple hover:text-white" : ""}  rounded-full px-4 py-3  font-semibold text-[1rem] w-fit flex items-center gap-3 hover:scale-98 hover:shadow-xs hover:shadow-purple duration-100 ease-in`}
       >
         {children}
       </a>

@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar/Navbar";
+import Hero from "./section/Hero/Hero";
 
 function App() {
   return (
@@ -6,7 +7,9 @@ function App() {
       <header className="border-b border-gray shadow-xm">
         <Navbar></Navbar>
       </header>
-      <main className=""></main>
+      <main className="cssContainer">
+        <Hero></Hero>
+      </main>
       <footer className=""></footer>
     </>
   );
