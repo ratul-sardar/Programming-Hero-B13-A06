@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./section/Hero/Hero";
+import SocialProof from "./section/SocialProof/SocialProof";
 
 function App() {
   return (
@@ -7,8 +8,9 @@ function App() {
       <header className="border-b border-gray shadow-xm">
         <Navbar></Navbar>
       </header>
-      <main className="cssContainer">
+      <main className="">
         <Hero></Hero>
+        <SocialProof></SocialProof>
       </main>
       <footer className=""></footer>
     </>
