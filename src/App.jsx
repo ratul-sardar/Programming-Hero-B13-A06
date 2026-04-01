@@ -4,6 +4,7 @@ import SocialProof from "./section/SocialProof/SocialProof";
 import HowToStart from "./section/HowToStart/HowToStart";
 import Cta from "./section/Cta/Cta";
 import Footer from "./components/Footer/Footer";
+import Pricing from "./section/Pricing/Pricing";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Hero></Hero>
         <SocialProof></SocialProof>
         <HowToStart></HowToStart>
+        <Pricing></Pricing>
         <Cta></Cta>
       </main>
       <footer className="bg-text-black text-white w-full">

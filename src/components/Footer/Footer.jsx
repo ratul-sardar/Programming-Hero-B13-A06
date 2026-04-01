@@ -33,7 +33,7 @@ const legal = [
 
 export default function Footer() {
   return (
-    <div className="cssContainer text-white">
+    <div className="cssContainer pb-0 text-white">
       {/* Top section */}
       <div className="flex flex-col lg:flex-row gap-12 lg:gap-8">
         {/* Brand */}
@@ -170,11 +170,8 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Divider */}
-      <div className="divider my-10 opacity-20" />
-
       {/* Bottom bar */}
-      <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div className="flex flex-col py-10 sm:flex-row justify-between items-center gap-4">
         <span className="text-sm text-white/50">
           © 2026 Digitools. All rights reserved.
         </span>

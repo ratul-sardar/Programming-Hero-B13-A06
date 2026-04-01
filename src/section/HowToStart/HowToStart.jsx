@@ -32,7 +32,7 @@ export default function HowToStart() {
     <section id="HowToStart" className=" bg-background-white">
       <div className="cssContainer">
         {/* Heading*/}
-        <div className="text-center mb-10 ">
+        <div className="text-center mb-10">
           <h2 className="mb-4">Get Started in 3 Steps</h2>
           <p className="">
             Start using premium digital tools in minutes, not hours.
