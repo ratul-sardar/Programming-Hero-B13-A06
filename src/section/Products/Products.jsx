@@ -39,7 +39,7 @@ export default function Products({ productData, cart, addProduct }) {
           {/* Cards*/}
           {Tab === "product"
             ? ProductList(productData, addProduct)
-            : ProductCart()}
+            : ProductCart(cart)}
         </div>
       </section>
     </>
@@ -62,10 +62,63 @@ function ProductList(productData, addProduct) {
 }
 
 // Product Cart
-function ProductCart() {
+function ProductCart(cart) {
   return (
-    <>
-      <h1>hi</h1>
-    </>
+    <div className="flex items-center justify-center min-h-screen bg-base-200">
+      <div className="w-full max-w-2xl bg-white rounded-2xl shadow-sm p-6">
+        {/* Header */}
+        <h2 className="text-xl font-bold text-gray-900 mb-5">Your Cart</h2>
+
+        {/* Items */}
+        <div className="flex flex-col gap-3">
+          {cart.length === 0 ? (
+            <p className="text-sm text-gray-400 text-center py-8">
+              Your cart is empty.
+            </p>
+          ) : (
+            cart.map((item) => (
+              <div
+                key={item.id}
+                className="flex items-center gap-4 bg-gray-50 rounded-2xl px-4 py-4"
+              >
+                {/* Icon */}
+                <div className="w-11 h-11 rounded-xl bg-white shadow-sm flex items-center justify-center shrink-0">
+                  {item.icon}
+                </div>
+
+                {/* Info */}
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-semibold text-gray-900">
+                    {item.name}
+                  </p>
+                  <p className="text-sm text-gray-500">${item.price}</p>
+                </div>
+
+                {/* Remove */}
+                <button className="text-sm font-medium text-pink-500 hover:text-pink-600 transition-colors duration-150 cursor-pointer shrink-0">
+                  Remove
+                </button>
+              </div>
+            ))
+          )}
+        </div>
+
+        {/* Total */}
+        <div className="flex items-center justify-between mt-6 mb-4 px-1">
+          <span className="text-sm text-gray-500">Total:</span>
+          <span className="text-2xl font-extrabold text-gray-900">$90</span>
+        </div>
+
+        {/* CTA */}
+        <button
+          className="w-full py-4 rounded-2xl text-white font-semibold text-sm tracking-wide active:scale-[0.99] transition-all duration-200 cursor-pointer"
+          style={{
+            background: "linear-gradient(90deg, #6d28d9 0%, #9333ea 100%)",
+          }}
+        >
+          Proceed To Checkout
+        </button>
+      </div>
+    </div>
   );
 }
