@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import Pricing from "./section/Pricing/Pricing";
 import Products from "./section/Products/Products";
 import { use, useState } from "react";
+import { Suspense } from "react";
 
 // Fetch Products
 const productUrl = "/product.json";
@@ -40,11 +41,13 @@ export default function App() {
       <main className="">
         <Hero></Hero>
         <SocialProof></SocialProof>
-        <Products
-          productData={productData}
-          cart={cart}
-          addProduct={addProduct}
-        ></Products>
+        <Suspense fallback={<div className="h-96 animate-pulse bg-gray-200" />}>
+          <Products
+            productData={productData}
+            cart={cart}
+            addProduct={addProduct}
+          ></Products>
+        </Suspense>
         <HowToStart></HowToStart>
         <Pricing></Pricing>
         <Cta></Cta>
