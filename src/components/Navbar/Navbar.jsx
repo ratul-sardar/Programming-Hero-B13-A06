@@ -12,7 +12,7 @@ const NavLinks = [
 
 const ctaLink = "#";
 
-export default function Navbar() {
+export default function Navbar({ cart }) {
   return (
     <nav className="cssContainer py-4">
       <div className="navbar p-0">
@@ -96,7 +96,7 @@ export default function Navbar() {
           {/* Cart*/}
           <a href="" className="block p-3  relative text-2xl">
             <span className="absolute top-0 right-0 inline-block p-0.5 text-sm font-semibold text-purple">
-              7
+              {cart.length}
             </span>
             <FiShoppingCart />
           </a>

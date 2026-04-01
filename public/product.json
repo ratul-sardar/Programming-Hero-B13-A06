@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "name": "AI Resume Builder Pro",
+    "description": "Create professional, ATS-friendly resumes using AI-powered suggestions and modern templates.",
+    "price": 19,
+    "period": "one-time",
+    "tag": "best seller",
+    "tagType": "best-seller",
+    "features": [
+      "100+ templates",
+      "ATS optimization",
+      "Export to PDF",
+      "AI content suggestions"
+    ],
+    "icon": "https://i.ibb.co.com/JW7KYXbW/writing-2327400-1.png"
+  },
+  {
+    "id": 2,
+    "name": "Social Media Scheduler",
+    "description": "Plan, schedule, and automate posts across multiple social platforms from one dashboard.",
+    "price": 9,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Multi-platform posting",
+      "Content calendar",
+      "Auto scheduling",
+      "Analytics dashboard"
+    ],
+    "icon": "https://i.ibb.co.com/jZPb6HxK/camera-8775444-1.png"
+  },
+  {
+    "id": 3,
+    "name": "Logo Maker Studio",
+    "description": "Design stunning logos instantly with customizable templates and AI design assistance.",
+    "price": 15,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "500+ logo templates",
+      "Custom colors & fonts",
+      "High-resolution export",
+      "Brand kit generator"
+    ],
+    "icon": "https://i.ibb.co.com/C5JfTs3N/design-tool.png"
+  },
+  {
+    "id": 4,
+    "name": "Website Builder Lite",
+    "description": "Build responsive websites with drag-and-drop tools and prebuilt sections.",
+    "price": 12,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Drag & drop editor",
+      "Responsive design",
+      "SEO tools",
+      "Hosting included"
+    ],
+    "icon": "https://i.ibb.co.com/Kc7gQMqF/operation.png"
+  },
+  {
+    "id": 5,
+    "name": "Email Marketing Pro",
+    "description": "Create, send, and track email campaigns with automation and segmentation tools.",
+    "price": 25,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best-seller",
+    "features": [
+      "Email templates",
+      "Automation workflows",
+      "Subscriber segmentation",
+      "Performance analytics"
+    ],
+    "icon": "https://i.ibb.co.com/MwrJ4Vk/operation-11826522-1.png"
+  },
+  {
+    "id": 6,
+    "name": "SEO Audit Tool",
+    "description": "Analyze your website SEO and get actionable recommendations to improve rankings.",
+    "price": 29,
+    "period": "yearly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Full site audit",
+      "Keyword tracking",
+      "Backlink analysis",
+      "Competitor insights"
+    ],
+    "icon": "https://images.icon-icons.com/2072/PNG/512/find_internet_magnifier_search_security_seo_zoom_icon_127104.png"
+  },
+  {
+    "id": 7,
+    "name": "AI Content Generator",
+    "description": "Generate blog posts, ads, and social content using advanced AI models.",
+    "price": 20,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "Blog & ad copy generation",
+      "Multiple tones",
+      "Plagiarism check",
+      "Export options"
+    ],
+    "icon": "https://images.icon-icons.com/2817/PNG/512/ai_artificial_intelligence_chip_technology_cpu_icon_179503.png"
+  },
+  {
+    "id": 8,
+    "name": "Invoice & Billing Manager",
+    "description": "Create invoices, track payments, and manage client billing efficiently.",
+    "price": 10,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best-seller",
+    "features": [
+      "Custom invoices",
+      "Payment tracking",
+      "Recurring billing",
+      "Client management"
+    ],
+    "icon": "https://images.icon-icons.com/3087/PNG/512/bill_invoice_payment_receipt_billing_icon_191398.png"
+  }
+]
