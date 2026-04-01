@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <>
       <section id="HeroSection" className="">
-        <div className="cssContainer grid items-center grid-cols-12 gap-8 lg:gap-15">
+        <div className="cssContainer py-15 grid items-center grid-cols-12 gap-8 lg:gap-15">
           {/* Content Panel*/}
           <div className="col-span-12 md:col-span-7">
             {/* Content*/}
