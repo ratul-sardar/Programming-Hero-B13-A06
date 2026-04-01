@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Hero from "./section/Hero/Hero";
 import SocialProof from "./section/SocialProof/SocialProof";
 import HowToStart from "./section/HowToStart/HowToStart";
+import Cta from "./section/Cta/Cta";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Hero></Hero>
         <SocialProof></SocialProof>
         <HowToStart></HowToStart>
+        <Cta></Cta>
       </main>
       <footer className=""></footer>
     </>

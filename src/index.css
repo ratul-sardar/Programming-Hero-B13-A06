@@ -22,7 +22,7 @@
         font-size: clamp(2.25rem, 1.3929rem + 2.1429vw, 3rem);
     }
     h3 {
-        @apply text-[2.5rem];
+        font-size: clamp(1.875rem, 1.1607rem + 1.7857vw, 2.5rem);
     }
 
     h1,
