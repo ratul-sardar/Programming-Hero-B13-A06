@@ -63,8 +63,13 @@ function ProductList(productData, addProduct) {
 
 // Product Cart
 function ProductCart(cart) {
+  let totalPrice = 0;
+  function calculateTotalPrice(price) {
+    totalPrice += price;
+  }
+
   return (
-    <div className="flex items-center justify-center min-h-screen bg-base-200">
+    <div className="flex items-center justify-center min-h-screen ">
       <div className="w-full max-w-2xl bg-white rounded-2xl shadow-sm p-6">
         {/* Header */}
         <h2 className="text-xl font-bold text-gray-900 mb-5">Your Cart</h2>
@@ -83,7 +88,7 @@ function ProductCart(cart) {
               >
                 {/* Icon */}
                 <div className="w-11 h-11 rounded-xl bg-white shadow-sm flex items-center justify-center shrink-0">
-                  {item.icon}
+                  <img src={item.icon} alt="card icon" className="" />
                 </div>
 
                 {/* Info */}
@@ -98,6 +103,9 @@ function ProductCart(cart) {
                 <button className="text-sm font-medium text-pink-500 hover:text-pink-600 transition-colors duration-150 cursor-pointer shrink-0">
                   Remove
                 </button>
+
+                {/* Calculate the total Price*/}
+                {calculateTotalPrice(item.price)}
               </div>
             ))
           )}
@@ -106,7 +114,9 @@ function ProductCart(cart) {
         {/* Total */}
         <div className="flex items-center justify-between mt-6 mb-4 px-1">
           <span className="text-sm text-gray-500">Total:</span>
-          <span className="text-2xl font-extrabold text-gray-900">$90</span>
+          <span className="text-2xl font-extrabold text-gray-900">
+            ${totalPrice}
+          </span>
         </div>
 
         {/* CTA */}
