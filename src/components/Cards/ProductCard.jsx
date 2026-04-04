@@ -1,6 +1,20 @@
 import { Check } from "lucide-react";
+import { useState } from "react";
 
 export default function Product({ product, addProduct }) {
+  let [inCart, setInCart] = useState(false);
+
+  // Set card status to added cart
+  function setToCart() {
+    setInCart(true);
+  }
+
+  // Remove card's "added to cart" status from added cart
+  function removeFromCart() {
+    setInCart(false);
+  }
+
+  // Destructuring the props
   let {
     id = 8,
     name = "Invoice & Billing Manager",
@@ -68,10 +82,13 @@ export default function Product({ product, addProduct }) {
 
         {/* CTA Button */}
         <button
-          className="w-full py-3.5 rounded-full bg-main-linear text-[1rem]  text-white font-bold active:scale-95 transition-all duration-200 cursor-pointer"
-          onClick={() => addProduct(product)}
+          className={`w-full py-3.5 rounded-full ${inCart ? "bg-green-500" : "bg-main-linear"}  text-white text-[1rem] font-bold  transition-all duration-200 cursor-pointer`}
+          onClick={() => {
+            addProduct(product);
+            setToCart();
+          }}
         >
-          Buy Now
+          {inCart ? "Added To Cart" : "Buy Now"}
         </button>
       </div>
     </>

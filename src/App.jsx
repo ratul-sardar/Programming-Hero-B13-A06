@@ -45,6 +45,7 @@ export default function App() {
           <Products
             productData={productData}
             cart={cart}
+            setCart={setCart}
             addProduct={addProduct}
           ></Products>
         </Suspense>

@@ -1,9 +1,10 @@
 import { useState } from "react";
 import ProductCard from "../../components/Cards/ProductCard";
 
-export default function Products({ productData, cart, addProduct }) {
+export default function Products({ productData, cart, setCart, addProduct }) {
   let [Tab, setTab] = useState("product");
 
+  // To switch the tab.
   function handleTab(tab) {
     setTab(tab);
   }
@@ -21,12 +22,15 @@ export default function Products({ productData, cart, addProduct }) {
 
             {/* Tab switching buttons*/}
             <div className="w-fit mx-auto rounded-full border border-base-300 shadow-xm shadow-base-300/20 p-1 flex">
+              {/* Product Buttons */}
               <button
                 className={`btn rounded-full ${Tab === "product" ? "bg-main-linear text-white" : "btn-outline border-none hover:bg-transparent"}  `}
                 onClick={() => handleTab("product")}
               >
                 Products
               </button>
+
+              {/* Cart Button */}
               <button
                 className={`btn rounded-full ${Tab === "product" ? "btn-outline border-none hover:bg-transparent" : "bg-main-linear text-white"}  `}
                 onClick={() => handleTab("tab")}
@@ -39,7 +43,7 @@ export default function Products({ productData, cart, addProduct }) {
           {/* Cards*/}
           {Tab === "product"
             ? ProductList(productData, addProduct)
-            : ProductCart(cart)}
+            : ProductCart(cart, setCart)}
         </div>
       </section>
     </>
@@ -62,14 +66,14 @@ function ProductList(productData, addProduct) {
 }
 
 // Product Cart
-function ProductCart(cart) {
+function ProductCart(cart, setCart) {
   let totalPrice = 0;
   function calculateTotalPrice(price) {
     totalPrice += price;
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen ">
+    <div className="flex items-center justify-center ">
       <div className="w-full max-w-2xl bg-white rounded-2xl shadow-sm p-6">
         {/* Header */}
         <h2 className="text-xl font-bold text-gray-900 mb-5">Your Cart</h2>
@@ -125,6 +129,7 @@ function ProductCart(cart) {
           style={{
             background: "linear-gradient(90deg, #6d28d9 0%, #9333ea 100%)",
           }}
+          onClick={() => setCart([])}
         >
           Proceed To Checkout
         </button>
