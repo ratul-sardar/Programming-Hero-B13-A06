@@ -9,14 +9,9 @@ export default function Product({ product, addProduct }) {
     setInCart(true);
   }
 
-  // Remove card's "added to cart" status from added cart
-  function removeFromCart() {
-    setInCart(false);
-  }
-
   // Destructuring the props
   let {
-    id = 8,
+    // id = 8,
     name = "Invoice & Billing Manager",
     description = "Create invoices, track payments, and manage client billing efficiently.",
     price = 10,
