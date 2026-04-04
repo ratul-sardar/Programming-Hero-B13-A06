@@ -104,7 +104,14 @@ function ProductCart(cart, setCart) {
                 </div>
 
                 {/* Remove */}
-                <button className="text-sm font-medium text-pink-500 hover:text-pink-600 transition-colors duration-150 cursor-pointer shrink-0">
+                <button
+                  className="text-sm font-medium text-pink-500 hover:text-pink-600 transition-colors duration-150 cursor-pointer shrink-0"
+                  onClick={() =>
+                    setCart([
+                      ...cart.filter((cartItem) => cartItem.id != item.id),
+                    ])
+                  }
+                >
                   Remove
                 </button>
 
@@ -125,7 +132,7 @@ function ProductCart(cart, setCart) {
 
         {/* CTA */}
         <button
-          className="w-full py-4 rounded-2xl text-white font-semibold text-sm tracking-wide active:scale-[0.99] transition-all duration-200 cursor-pointer"
+          className={`w-full py-4 rounded-2xl text-white font-semibold text-sm tracking-wide active:scale-[0.99] transition-all duration-200 cursor-pointer`}
           style={{
             background: "linear-gradient(90deg, #6d28d9 0%, #9333ea 100%)",
           }}
