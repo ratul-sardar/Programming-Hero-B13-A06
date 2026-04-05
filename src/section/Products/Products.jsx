@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ProductCard from "../../components/Cards/ProductCard";
+import { toast } from "react-toastify";
 
 export default function Products({ productData, cart, setCart, addProduct }) {
   let [Tab, setTab] = useState("product");
@@ -7,6 +8,20 @@ export default function Products({ productData, cart, setCart, addProduct }) {
   // To switch the tab.
   function handleTab(tab) {
     setTab(tab);
+  }
+
+  // Remove Items from the cart
+  function removeItems(item) {
+    setCart([...cart.filter((cartItem) => cartItem.id != item.id)]);
+    toast.error("Item removed from the cart!");
+  }
+
+  // Proceed To Check out
+  function proceedToCheckOut() {
+    if (cart.length) {
+      setCart([]);
+      toast.success("Item check out complete!");
+    }
   }
 
   return (
@@ -43,7 +58,7 @@ export default function Products({ productData, cart, setCart, addProduct }) {
           {/* Cards*/}
           {Tab === "product"
             ? ProductList(productData, addProduct)
-            : ProductCart(cart, setCart)}
+            : ProductCart(cart, setCart, removeItems, proceedToCheckOut)}
         </div>
       </section>
     </>
@@ -66,7 +81,7 @@ function ProductList(productData, addProduct) {
 }
 
 // Product Cart
-function ProductCart(cart, setCart) {
+function ProductCart(cart, setCart, removeItems, proceedToCheckOut) {
   let totalPrice = 0;
   function calculateTotalPrice(price) {
     totalPrice += price;
@@ -106,11 +121,7 @@ function ProductCart(cart, setCart) {
                 {/* Remove */}
                 <button
                   className="text-sm font-medium text-pink-500 hover:text-pink-600 transition-colors duration-150 cursor-pointer shrink-0"
-                  onClick={() =>
-                    setCart([
-                      ...cart.filter((cartItem) => cartItem.id != item.id),
-                    ])
-                  }
+                  onClick={() => removeItems(item)}
                 >
                   Remove
                 </button>
@@ -130,13 +141,13 @@ function ProductCart(cart, setCart) {
           </span>
         </div>
 
-        {/* CTA */}
+        {/* Proceed To Checkout Button */}
         <button
           className={`w-full py-4 rounded-2xl text-white font-semibold text-sm tracking-wide active:scale-[0.99] transition-all duration-200 cursor-pointer`}
           style={{
             background: "linear-gradient(90deg, #6d28d9 0%, #9333ea 100%)",
           }}
-          onClick={() => setCart([])}
+          onClick={() => proceedToCheckOut()}
         >
           Proceed To Checkout
         </button>

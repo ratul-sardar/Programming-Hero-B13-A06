@@ -8,6 +8,7 @@ import Pricing from "./section/Pricing/Pricing";
 import Products from "./section/Products/Products";
 import { use, useState } from "react";
 import { Suspense } from "react";
+import { toast } from "react-toastify";
 
 // Fetch Products
 const productUrl = "/product.json";
@@ -55,6 +56,8 @@ export default function App() {
       </main>
       <footer className="bg-text-black text-white w-full">
         <Footer></Footer>
+
+        <button onClick={() => toast.error("🦄 Wow so easy!")}>click me</button>
       </footer>
     </>
   );

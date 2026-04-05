@@ -1,5 +1,6 @@
 import { Check } from "lucide-react";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 export default function Product({ product, addProduct }) {
   let [inCart, setInCart] = useState(false);
@@ -81,6 +82,7 @@ export default function Product({ product, addProduct }) {
           onClick={() => {
             addProduct(product);
             setToCart();
+            toast.success("Item added to cart!");
           }}
         >
           {inCart ? "Added To Cart" : "Buy Now"}
